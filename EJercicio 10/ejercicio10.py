@@ -28,13 +28,30 @@ def crear_persona():
         else:
             print('Elija un id nuevo')
 
-fin=False
+def sumar_edad():
+    for i in range (0,1000):
+        if(persona.id!=-1):
+            persona.edad=persona.edad+1
+        else:
+            i=i+1
 
+
+fin=False
 while(fin==False):
     r1=str(input('Quieres crear una  nueva persona?:'))
     if(r1=='s'or r1=='S'):
         crear_persona()
     if(r1=='n'or r1=='N'):
+        fin=True
+    else:
+        print('Introduzca una S o una N')
+
+fin2=False
+while(fin2==False):
+    r2=str(input('Quieres sumarle 1 año a todas las personas de la lista?:'))
+    if(r2=='s'or r2=='S'):
+        sumar_edad()
+    if(r2=='n'or r2=='N'):
         fin=True
     else:
         print('Introduzca una S o una N')
