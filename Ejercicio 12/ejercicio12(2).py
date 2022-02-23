@@ -1,9 +1,5 @@
-import math
 n=int(input('Numero:\n'))
-lista=[]
-for i in range (0,n):
-    h1=float(math.sqrt(i))
-    h2=int(math.sqrt(i))
-    if(h1==h2):
-        lista.append(i)
-print(lista)
+i=1
+while(i*i<=n):
+    i=i+1
+print('La parte entera de la raiz cuadrada es: '+str(i-1))
